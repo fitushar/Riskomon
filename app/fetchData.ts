@@ -4,6 +4,7 @@ import bank from "./input_data/BANK.json";
 import fico from "./input_data/FICO.json";
 import mammo from "./input_data/MAMMO.json";
 import shroom from "./input_data/SHROOM.json";
+import cancerStlmd from "./input_data/CANCER_STLMD.json";
 
 interface FetchDataResult {
   models: ModelData[];
@@ -29,6 +30,8 @@ export const fetchData = (filename: string): FetchDataResult => {
         return mammo as ModelData[];
       case "SHROOM":
         return shroom as ModelData[];
+      case "CANCER_STLMD":
+        return cancerStlmd as ModelData[];
       default:
         return [];
     }
